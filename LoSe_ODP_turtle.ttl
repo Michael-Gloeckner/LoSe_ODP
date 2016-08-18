@@ -133,10 +133,6 @@ LoSe_ODP:hasCapability rdf:type owl:ObjectProperty ;
 
 LoSe_ODP:hasCapacity rdf:type owl:ObjectProperty ;
                      
-                     rdfs:label "hasCapacity"@en ;
-                     
-                     rdfs:comment "determines a certain capacity of something."@en ;
-                     
                      rdfs:range LoSe_ODP:Capacity ;
                      
                      rdfs:domain LoSe_ODP:Resource .
@@ -147,9 +143,9 @@ LoSe_ODP:hasCapacity rdf:type owl:ObjectProperty ;
 
 LoSe_ODP:hasCharacter rdf:type owl:ObjectProperty ;
                       
-                      rdfs:label "hasCharacter" ;
+                      rdfs:label "hasCharacter"@en ;
                       
-                      rdfs:comment "defines the character of either a Flow or a Resource" ;
+                      rdfs:comment "defines the character of a Resource"@en ;
                       
                       rdfs:range LoSe_ODP:Character ;
                       
@@ -168,6 +164,29 @@ LoSe_ODP:hasTransformation rdf:type owl:ObjectProperty ;
                            rdfs:domain LoSe_ODP:Capability ;
                            
                            rdfs:range LoSe_ODP:Transformation .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  https://github.com/Michael-Gloeckner/LoSe_ODP#capacity
+
+LoSe_ODP:capacity rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:label "capacity"@en ;
+                  
+                  rdfs:comment "quantifies a cpacity"@en ;
+                  
+                  rdfs:range xsd:float ;
+                  
+                  rdfs:domain LoSe_ODP:Capacity .
 
 
 
